@@ -1,0 +1,16 @@
+<div class="card">
+  <div class="card-header">Add New FAQ</div>
+  <div class="card-body">
+    <form (ngSubmit)="addQuestion()">
+      <div class="form-group">
+        <label for="text">Question Text</label>
+        <input type="text" class="form-control" name="text" id="text" [(ngModel)]="text">
+      </div>
+      <div class="form-group">
+        <label for="answer">Question Answer</label>
+        <input type="text" class="form-control" name="answer" id="answer" [(ngModel)]="answer">
+      </div>
+      <input type="submit" class="btn btn-primary" value="Submit">
+    </form>
+  </div>
+</div>
