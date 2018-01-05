@@ -17,10 +17,7 @@ export class DataService {
   // Add Question to LocalStorage
   addQuestion(question: Question) {
 
-    // let questions;                                                      // Initialize local variable
-
     if (localStorage.getItem('questions') === null) {
-      // questions = [];
       this.questions.unshift(question);                                      // Push new question
       localStorage.setItem('questions', JSON.stringify(this.questions));     // Set new array to LocalStorage
      } else {
