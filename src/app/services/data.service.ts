@@ -18,12 +18,14 @@ export class DataService {
   addQuestion(question: Question) {
 
     if (localStorage.getItem('questions') === null) {
-      this.questions.unshift(question);                                      // Push new question
-      localStorage.setItem('questions', JSON.stringify(this.questions));     // Set new array to LocalStorage
-     } else {
-       this.questions = JSON.parse(localStorage.getItem('questions'));
-       this.questions.unshift(question);                                     // Add new question
-       localStorage.setItem('questions', JSON.stringify(this.questions));    // Reset LocalStorage
+      // If localStorage is empty
+      this.questions.unshift(question);
+      localStorage.setItem('questions', JSON.stringify(this.questions));
+    } else {
+      // If localStorage has data
+      this.questions = JSON.parse(localStorage.getItem('questions'));
+      this.questions.unshift(question);
+      localStorage.setItem('questions', JSON.stringify(this.questions));
      }
   }
 
