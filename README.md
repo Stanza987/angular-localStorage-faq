@@ -3,7 +3,6 @@ This project is the result of my code-along to the FAQ App Project in [Angular 4
 
 <p align="center">
     <img width="500" height="370" src="./src/assets/png/homepage.png"><br>
-    <a href="https://localstoragefaq.firebaseapp.com/" target="_blank">Angular LocalStorage FAQ App</a>
 </p>
 
 ## Versions
